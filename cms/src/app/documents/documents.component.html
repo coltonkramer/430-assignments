@@ -2,8 +2,13 @@
   <div class="col-md-5">
     <app-documents-list></app-documents-list>
   </div>
-
   <div class="col-md-4">
-    <app-documents-detail></app-documents-detail>
+    <app-documents-detail
+    [documents]="selectedDocument"
+    *ngIf="selectedDocument; else infoText">
+  </app-documents-detail>
+    <ng-template #infoText>
+      <p>Please select a document!</p>
+    </ng-template>
   </div>
 </div>
