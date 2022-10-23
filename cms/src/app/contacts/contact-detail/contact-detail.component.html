@@ -5,29 +5,29 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <h1>{{ contact.name }}</h1>
+        <h1>{{ contact!.name }}</h1>
     </div>
 </div>
 <div class="row">
     <div class="col-xs-12">
         <div class="btn-group pull-right">
-            <button type="button" class="btn btn-primary m-3">Edit</button>
-            <button type="button" class="btn btn-danger p-3">Delete</button>
+            <button type="button" class="btn btn-primary m-3" routerLink="edit">Edit</button>
+            <button type="button" class="btn btn-danger p-3" (click)="onDelete()">Delete</button>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-xs-12">
-        Email: {{ contact.email }}
+        Email: {{ contact!.email }}
     </div>
 </div>
 <div class="row">
     <div class="col-xs-12">
-        Phone: {{ contact.phone }}
+        Phone: {{ contact!.phone }}
     </div>
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <img src="{{ contact.imageUrl }}" alt="{{ contact.name }}">
+        <img src="{{ contact!.imageUrl }}" alt="{{ contact!.name }}">
     </div>
 </div>

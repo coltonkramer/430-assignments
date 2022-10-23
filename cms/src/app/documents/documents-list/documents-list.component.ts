@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Document } from '../documents.model';
 import { DocumentsService } from '../documents.service';
 
@@ -21,7 +21,4 @@ export class DocumentsListComponent implements OnInit {
     );
   }
 
-  onDocumentSelected(documents: Document) {
-    this.documentsService.documentSelectedEvent.emit(documents);
-  }
 }

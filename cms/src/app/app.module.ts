@@ -15,6 +15,8 @@ import { MessageItemComponent } from './messages/message-item/message-item.compo
 import { MessageEditComponent } from './messages/message-edit/message-edit.component';
 import { MessageListComponent } from './messages/message-list/message-list.component';
 import { DropdownHeaderDirective } from './header/dropdown-header.directive';
+import { DocumentsEditComponent } from './documents/documents-edit/documents-edit.component';
+import { ContactsEditComponent } from './contacts/contacts-edit/contacts-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { DropdownHeaderDirective } from './header/dropdown-header.directive';
     MessageItemComponent,
     MessageEditComponent,
     MessageListComponent,
-    DropdownHeaderDirective
+    DropdownHeaderDirective,
+    DocumentsEditComponent,
+    ContactsEditComponent
   ],
   imports: [
     BrowserModule,
