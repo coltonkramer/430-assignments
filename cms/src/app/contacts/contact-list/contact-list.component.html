@@ -1,16 +1,27 @@
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <div class="row pad-left-right">
-            <span class="pull-left title">Contacts</span>
-            <button class="btn btn-success pull-right" routerLink="new">New Contact</button>
-        </div>
+  <div class="panel-heading">
+    <div class="row pad-left-right">
+      <h1 class="pull-left title">Contacts</h1>
+      <button class="btn btn-success pull-right" routerLink="new">
+        New Contact
+      </button>
     </div>
-    <div class="panel-body">
-        <div class="center-panel">
-            <app-contact-item
-            *ngFor="let contactElement of contacts"
-            [contact]="contactElement"
-            ></app-contact-item>
+  </div>
+  <div class="panel-body">
+    <div class="center-panel">
+      <div class="row">
+        <div class="col-xs-12">
+          <app-contact-item
+            *ngFor="let contact of contacts"
+            [contact]="contact"
+            dnd-draggable
+            [dragEnabled]="true"
+            [dragData]="contact"
+            [dropZones]="['contactGroup']"
+          >
+          </app-contact-item>
         </div>
+      </div>
     </div>
+  </div>
 </div>

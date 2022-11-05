@@ -17,6 +17,8 @@ import { MessageListComponent } from './messages/message-list/message-list.compo
 import { DropdownHeaderDirective } from './header/dropdown-header.directive';
 import { DocumentsEditComponent } from './documents/documents-edit/documents-edit.component';
 import { ContactsEditComponent } from './contacts/contacts-edit/contacts-edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DndModule } from 'ng2-dnd';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,10 @@ import { ContactsEditComponent } from './contacts/contacts-edit/contacts-edit.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    DndModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
