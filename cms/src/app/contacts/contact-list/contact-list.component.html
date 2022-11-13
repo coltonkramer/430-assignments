@@ -1,10 +1,24 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="row pad-left-right">
-      <h1 class="pull-left title">Contacts</h1>
-      <button class="btn btn-success pull-right" routerLink="new">
-        New Contact
-      </button>
+      <span class="pull-left title">Contacts</span>
+      <div class="input-group pull-left pad-left-right col-xs-7">
+        <input
+          type="text"
+          placeholder="Enter a search value"
+          class="form-control"
+          #searchBox
+          (keypress)="search(searchBox.value)"
+        />
+        <div
+          class="glyphicon glyphicon-search input-group-addon"
+          (click)="search(searchBox.value)"
+        ></div>
+      <div class="pull-right">
+        <a class="btn btn-success pad-left-right" [routerLink]="['new']"
+          >New Contact</a
+        >
+      </div>
     </div>
   </div>
   <div class="panel-body">
